@@ -8,7 +8,7 @@ router.get('/', (request, response) => {
   pool.query('SELECT * FROM books', (err, res) => {
     if (err) console.log(err);
 
-    response.json(res.rows);
+    response.status(200).json(res.rows);
   });
 });
 
